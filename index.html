@@ -42,7 +42,7 @@
     <script>
         getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("<img with=10% height=10% src='assets/circle.svg'/>I'm listening now to:");
+                    $("#ltext").html("<img with='30px' height='30px' src='assets/circle.svg'/>I'm listening now to:");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
@@ -55,7 +55,7 @@
         setInterval(function(){
             getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("<img with=10% height=10% src='assets/circle.svg'/></div>I'm listening now to:");
+                    $("#ltext").html("<img with='30px' height='30px' src='assets/circle.svg'/></div>I'm listening now to:");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
