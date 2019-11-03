@@ -42,7 +42,7 @@
     <script>
         getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("I'm listening now to:");
+                    $("#ltext").html("<div class='pulsating-circle'></div>I'm listening now to:");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
@@ -55,14 +55,14 @@
         setInterval(function(){
             getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("I'm listening now to:");
+                    $("#ltext").html("<div class='pulsating-circle'></div>I'm listening now to:");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
                 if(artist.length > 25){if(artist[22] == " "){artist = artist.substring(0,21) + "..."}else{artist = artist.substring(0,22) + "...";}}
                 if(title.length > 25){if(title[22] == " "){title = title.substring(0,21) + "..."}else{title = title.substring(0,22) + "...";}}
-                $("#artist").html(artist);
-                $("#song").html(title)},
+                $("#artist").text(artist);
+                $("#song").text(title)},
                 "xdavidhu");
         }, 2000);
     </script>
