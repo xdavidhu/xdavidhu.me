@@ -42,7 +42,7 @@
     <script>
         getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/>I'm listening now to:");
+                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/><span style='vertical-align: middle;'>I'm listening now to:</span>");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
