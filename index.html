@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="panel" align=center style="display: none" id="main">
-        <img src="images/xdavid-transparent.png" height="200" width="200"/>
+        <img src="images/xdavid_new.png" height="200" width="200"/>
         <p style="color: #fff; font-size: 50px; height: 30px">xdavidhu</p>
         <p style="color: #fff; padding-bottom: 5px; padding-top: 40px"><i>Hacker & Web developer & Bug Hunter</i></p>
         <div id="spotify" style="color: #fff; padding-bottom: 20px"><div id="ltext"></div><div><span id="artist" style="white-space: nowrap;"></span> - <span id="song" style="white-space: nowrap;"></span></div></div>
@@ -42,7 +42,7 @@
     <script>
         getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/><span style='vertical-align: middle;'>I'm listening now to:</span>");
+                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/><span style='padding-left: 5px; vertical-align: middle;'>I'm listening now to:</span>");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
@@ -55,7 +55,7 @@
         setInterval(function(){
             getSong(function(artist, title, nowplaying){
                 if (nowplaying == "true"){
-                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/><span style='vertical-align: middle;'>I'm listening now to:</span>");
+                    $("#ltext").html("<img width='30px' style='vertical-align: middle;' src='assets/circle.svg'/><span style='padding-left: 5px; vertical-align: middle;'>I'm listening now to:</span>");
                 } else {
                     $("#ltext").html("I was listening to:");
                 };
