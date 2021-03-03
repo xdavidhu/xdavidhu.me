@@ -1,0 +1,18 @@
+body {
+    background: #222;
+    color: #fff;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 20px;
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    margin: 0;
+}
+
+.interactive {
+    pointer-events: all;
+}

@@ -1,0 +1,3 @@
+pivot.init({
+    selector: "a"
+});

@@ -1,0 +1,120 @@
+/* 
+
+    hey you!
+    adding this many media queries feels very hacky.
+    do you know of a better way to do it? DM me:
+    https://twitter.com/xdavidhu
+
+*/
+
+@media (min-width : 1500px) {
+    .content {
+        width: 1050px;
+    }
+}
+
+@media (max-width : 1350px) {
+    .content {
+        width: 75%;
+    }
+    .media-item-wrapper {
+        margin-bottom: 1.2em;
+    }
+}
+
+@media (max-width : 1250px) {
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width : 1170px) {
+    .content {
+        width: 85%;
+    }
+}
+
+/* 2 item per row */
+@media (max-width : 1100px) {
+    .content {
+        width: 60%;
+    }
+    .media-item-wrapper {
+        margin-bottom: 2em;
+    }
+}
+
+@media (max-width : 1070px) {
+    .content {
+        width: 63%;
+    }
+}
+
+@media (max-width : 1040px) {
+    .content {
+        width: 65%;
+    }
+}
+
+@media (max-width : 1000px) {
+    .content {
+        width: 68%;
+    }
+}
+
+@media (max-width : 960px) {
+    .content {
+        width: 70%;
+    }
+}
+
+@media (max-width : 930px) {
+    .content {
+        width: 72%;
+    }
+    .media-item-wrapper {
+        margin-bottom: 2.3em;
+    }
+}
+
+@media (max-width : 900px) {
+    .content {
+        width: 75%;
+    }
+}
+
+@media (max-width : 860px) {
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width : 810px) {
+    .content {
+        width: 82%;
+    }
+    .media-item-wrapper {
+        margin-bottom: 2.1em;
+    }
+}
+
+/* mobile version */
+@media (max-width: 790px) {
+    .media-row {
+        display: block;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .media-item {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        display: block;
+    }
+    .media-item-wrapper {
+        margin-bottom: 1em;
+    }
+}

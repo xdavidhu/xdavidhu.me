@@ -1,0 +1,32 @@
+body {
+    background: #222;
+    color: #fff;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 20px;
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.panel {
+    text-align: center;
+    position: absolute;
+    background: transparent;
+    pointer-events: none;
+    z-index : 99;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.interactive {
+    pointer-events: all;
+}
+
+.btn-outline-secondary {
+    color: #fff;
+}
