@@ -8,19 +8,19 @@ function getInitialScale(){
     if (screen.height <= 500) {
         return "0.5";
     } else if (screen.height <= 550) {
-        if (getDir() == "/projects") {
+        if (getDir() == "/archive/projects") {
             return "0.5";
         } else {
             return "0.5";
         }
     } else if (screen.height <= 700) {
-        if (getDir() == "/projects") {
+        if (getDir() == "/archive/projects") {
             return "0.5";
         } else {
             return "0.6";
         }
     } else {
-        if (getDir() == "/projects") {
+        if (getDir() == "/archive/projects") {
             return "0.6";
         } else {
             return "0.9";
