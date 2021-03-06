@@ -12,16 +12,19 @@ function setScale(){
     else {
         // landscape
         if (screen.width > screen.height) {
-            if (screen.height > 410) {
-                scale = 0.7;
-            } else if (screen.height <= 410 && screen.height > 350) {
-                scale = 0.6;
-            } else if (screen.height <= 350 && screen.height > 300) {
-                scale = 0.5;
-            } else {
-                // for the Galaxy Fold front display :D
-                scale = 0.45;
-            }
+            // if (screen.height > 410) {
+            //     scale = 0.7;
+            // } else if (screen.height <= 410 && screen.height > 350) {
+            //     scale = 0.6;
+            // } else if (screen.height <= 350 && screen.height > 300) {
+            //     scale = 0.5;
+            // } else {
+            //     // for the Galaxy Fold front display :D
+            //     scale = 0.45;
+            // }
+
+            // Chrome takes up a crazy amount of space in landscape mode. just hardcode this to 0.5 for now.
+            scale = 0.5;
         }
 
         // portrait
