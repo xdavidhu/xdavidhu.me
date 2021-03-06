@@ -42,6 +42,11 @@
     .media-item-wrapper {
         margin-bottom: 2em;
     }
+
+    /* remove the placeholder, only need it when 3 items/row */
+    .placeholder {
+        display: none;
+    }
 }
 
 @media (max-width : 1070px) {

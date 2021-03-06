@@ -24,6 +24,7 @@ h2 {
 .content {
     width: 70%;
     margin: auto;
+    margin-bottom: 2em;
 }
 
 .media-row {
@@ -38,7 +39,7 @@ h2 {
     width: 300px;
 }
 
-.year {
+.content-group {
     margin-top: 30px;
 }
 
@@ -53,4 +54,9 @@ h2 {
 .media-item-wrapper {
     display: inline-flex;
     margin-bottom: 1.8em;
+}
+
+.placeholder {
+    opacity: 0;
+    pointer-events: none;
 }
