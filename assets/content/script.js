@@ -1,3 +1,4 @@
 pivot.init({
-    selector: "a"
+    selector: "a",
+    touch: false
 });
