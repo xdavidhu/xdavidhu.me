@@ -18,27 +18,12 @@ body {
     pointer-events: none;
 }
 
-.featured-panel {
-    margin-top: 5%;
-    position: absolute;
-    background: transparent;
-    width: 100%;
-    z-index : 99;
-    max-width: 100% !important;
-}
-
-.featured-particles-div {
-    position:fixed;
-    width: 100%;
-    height: 100%;
-    max-width: 100% !important;
-}
-
 .full-size{
   height:100%;
   width:100%;
   overflow:hidden;
 }
+
 .btn {
     font-family: 'Anonymous Pro', monospace;
     cursor: pointer;
