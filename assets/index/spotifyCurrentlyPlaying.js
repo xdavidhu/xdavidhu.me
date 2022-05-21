@@ -42,7 +42,8 @@ function getSong(callback, name) {
                                 lastfm_tracks[idx] = {
                                     title: arr[idx].name,
                                     artist: arr[idx].artist['#text'],
-                                    album: arr[idx].album['#text']
+                                    album: arr[idx].album['#text'],
+                                    url: arr[idx].url,
                                 };
                             });
                         } else {
@@ -54,13 +55,14 @@ function getSong(callback, name) {
                             lastfm_tracks.push({
                                 title: tracks.name,
                                 artist: tracks.artist['#text'],
-                                album: tracks.album['#text']
+                                album: tracks.album['#text'],
+                                url: arr[idx].url,
                             });
                         }
                     }
 
                     // Run the callback function
-                    callback(lastfm_tracks[0].artist, lastfm_tracks[0].title, nowplaying);
+                    callback(lastfm_tracks[0].artist, lastfm_tracks[0].title, nowplaying, lastfm_tracks[0].url);
                 } else {
                     // Error from the server
                     throw data.message;

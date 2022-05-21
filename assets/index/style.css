@@ -38,3 +38,13 @@ body {
     width: 200px;
     border-radius: 50%;
 }
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}

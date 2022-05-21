@@ -27,14 +27,14 @@
 
             <div id="spotify" style="padding-bottom: 20px">
                 <div id="ltext">
-                    <span id="live-message" style='vertical-align: middle; display: none'></span>
+                    <img id="live-dot" width='25px' style='vertical-align: top; margin-right: 5px; display: none' src='/assets/index/images/circle.svg'/><span id="live-message" style='vertical-align: middle; display: none'></span>
                 </div>
 
                 <div>
-                    <img id="live-dot" width='25px' style='vertical-align: text-top; display: none' src='/assets/index/images/circle.svg'/>
-                    <span id="artist" style="white-space: nowrap;"></span>
-                     - 
-                    <span id="song" style="white-space: nowrap;"></span>
+                    <a id="lastfm-url" class="interactive" target="_blank">
+                        <span id="artist" style="white-space: nowrap;"></span><br>
+                        <span id="song" style="white-space: nowrap;"></span>
+                    </a>
                 </div>
             </div>
 
@@ -50,8 +50,8 @@
             </div>
 
             <div style="margin-top: 30px" class="interactive">
-                <a href="https://bugs.xdavidhu.me/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">writeups</button></a>
-                <a href="content/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">content</button></a>
+                <a href="https://bugs.xdavidhu.me/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">blog</button></a>
+                <a href="content/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">featured</button></a>
                 <a href="archive/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">archive</button></a>
             </div>
 
@@ -67,13 +67,13 @@
         <script src="/assets/index/spotifyCurrentlyPlaying.js"></script>
         <script>
             function updateSong(){
-                getSong(function(artist, title, nowplaying) {
+                getSong(function(artist, title, nowplaying, lastfm_url) {
                     if (nowplaying == "true"){
                         $("#live-dot").show();
-                        $("#live-message").text("I'm listening now to:").show();
+                        $("#live-message").text("Currently playing:").show();
                     } else {
                         $("#live-dot").hide();
-                        $("#live-message").html("I was listening to:").show();
+                        $("#live-message").html("Was listening to:").show();
                     };
 
                     if (artist.length > 25) {
@@ -94,7 +94,9 @@
                     };
 
                     $("#artist").text(artist);
-                    $("#song").text(title)
+                    $("#song").text(title);
+                    // if lastfm gives back a javascript: url its over..
+                    $("#lastfm-url").attr("href", lastfm_url);
                 }, "xdavidhu");
             }
             
