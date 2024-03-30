@@ -1,50 +1,68 @@
-@import url("https://fonts.googleapis.com/css?family=Overpass+Mono:400,700");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:wght@400;500;600");
 
 body {
-    background: #222;
-    color: #fff;
-    font-family:"Overpass Mono",monospace;
-    font-size: 20px;
-
-    -khtml-user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+    background: #f6eee3;
+    color: black;
+    font-family:"EB Garamond";
+    font-size: 25px;
 }
 
-.panel {
-    text-align: center;
-    position: absolute;
-    background: transparent;
-    pointer-events: none;
-    z-index : 99;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
-}
-
-.interactive {
-    pointer-events: all;
-}
-
-.btn-outline-secondary {
-    color: #fff;
-}
-
-.profile {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+h1 {
+    padding-left: 1em;
+    text-indent: -1em;
 }
 
 a {
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
 a:hover {
-    color: #fff;
     text-decoration: underline;
+}
+
+#container {
+    display: flex;
+    height: 85%;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.line {
+    height: 9em;
+    width: 0.15em;
+    background-color: black;
+    border-radius: 100px;
+}
+@media (max-width: 600px) {
+    .line {
+        height: 0.15em;
+        width: 12em;
+    }
+}
+
+.title {
+    padding-right: 1em;
+}
+@media (max-width: 600px) {
+    .title {
+        padding-right: 0;
+    }
+}
+
+.navbox {
+    padding-left: 1em;
+    font-size: 27px;
+}
+@media (max-width: 600px) {
+    .navbox {
+        padding-left: 0em;
+        text-align: center;
+    }
 }

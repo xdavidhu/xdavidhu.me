@@ -1,114 +1,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>xdavidhu</title>
-        <meta name="theme-color" content="#222"/>
-        <meta name="viewport" content="initial-scale=0.9">
-
-        <!-- external resources -->
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-        <!-- local resources -->
-        <link rel='shortcut icon' type='image/x-icon' href='/assets/global/images/xdavid.png'/>
-        <link href='/assets/global/style.css' rel='stylesheet' type='text/css'>
-        <link href='/assets/index/style.css' rel='stylesheet' type='text/css'>
+        <title>David Schütz</title>
+        <meta name="theme-color" content="#f6eee3"/>
+        <link rel="stylesheet" href="/assets/index/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        
-        <!-- the layer above the full screen particle.js  -->
-        <div class="panel" id="main">
-
-            <!-- image by Hacktivity: https://www.flickr.com/photos/hacktivity/51576099193/in/album-72157719993277298/ -->
-            <img src="/assets/index/images/david-square.png" class="profile"/>
-            <p style="font-size: 50px; padding-top: 10px; margin-bottom: 5px">David Schütz</p>
-            <p style="padding-bottom: 5px"><i>security & bug bounty</i></p>
-
-            <div id="spotify" style="padding-bottom: 20px">
-                <div id="ltext">
-                    <img id="live-dot" width='25px' style='vertical-align: top; margin-right: 5px; display: none' src='/assets/index/images/circle.svg'/><span id="live-message" style='vertical-align: middle; display: none'></span>
-                </div>
-
-                <div>
-                    <a id="lastfm-url" class="interactive" target="_blank">
-                        <span id="artist" style="white-space: nowrap;"></span><br>
-                        <span id="song" style="white-space: nowrap;"></span>
-                    </a>
-                </div>
+        <div id="container">
+            <div class="title">
+                <h1>David<br/>Schütz</h1>
             </div>
-
-            <div class="interactive">
-                <!-- Icons by https://www.iconsdb.com/ -->
-                <a href="https://twitter.com/xdavidhu" target="_blank"><img src="/assets/index/images/twitter.png" style="width: 51.2px; height: 51.2px"/></a>
-                <span style="padding-right: 5px"></span>
-                <a href="https://www.linkedin.com/in/xdavidhu" target="_blank"><img src="/assets/index/images/linkedin.png" style="width: 51.2px; height: 51.2px"/></a>
-                <span style="padding-right: 5px"></span>
-                <a href="https://open.spotify.com/user/xdavidhu" target="_blank"><img src="/assets/index/images/spotify.png" style="width: 51.2px; height: 51.2px"/></a>
-                <span style="padding-right: 5px"></span>
-                <a href="https://github.com/xdavidhu" target="_blank"><img src="/assets/index/images/github.png" style="width: 51.2px; height: 51.2px"/></a>
+            <span class="line"></span>
+            <div class="navbox">
+                <p>
+                    <a href="https://bugs.xdavidhu.me/">bugs.xdavidhu.me</a><br/>
+                    <a href="https://notes.xdavidhu.me/">notes.xdavidhu.me</a><br/>
+                    <a href="https://youtube.com/xdavidhu">youtube.com/xdavidhu</a><br/>
+                    <a href="https://linkedin.com/in/xdavidhu">linkedin.com/xdavidhu</a><br/>
+                    <a href="https://open.spotify.com/user/xdavidhu">spotify.com/xdavidhu</a>
+                </p>
             </div>
-
-            <div style="margin-top: 30px" class="interactive">
-                <a href="https://bugs.xdavidhu.me/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">blog</button></a>
-                <a href="https://notes.xdavidhu.me/"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">journal</button></a>
-                <a href="https://www.youtube.com/c/xdavidhu"><button type="button" class="btn btn-outline-secondary" style="margin-bottom: 10px">youtube</button></a>
-            </div>
-
         </div>
-
-        <!-- the full screen particle.js in the background -->
-        <div id="particles-js"></div>
-
-        <script src="/assets/global/script.js"></script>
-        <script src="/assets/index/script.js"></script>
-
-        <!-- real-time spotify -->
-        <script src="/assets/index/spotifyCurrentlyPlaying.js"></script>
-        <script>
-            function updateSong(){
-                getSong(function(artist, title, nowplaying, lastfm_url) {
-                    if (nowplaying == "true"){
-                        $("#live-dot").show();
-                        $("#live-message").text("Currently playing:").show();
-                    } else {
-                        $("#live-dot").hide();
-                        $("#live-message").html("Was listening to:").show();
-                    };
-
-                    if (artist.length > 25) {
-                        if (artist[22] == " ") {
-                            artist = artist.substring(0,21) + "..."
-                        }
-                        else {
-                            artist = artist.substring(0,22) + "...";
-                        }
-                    };
-
-                    if (title.length > 25) {
-                        if (title[22] == " ") {
-                            title = title.substring(0,21) + "..."
-                        } else {
-                            title = title.substring(0,22) + "...";
-                        }
-                    };
-
-                    $("#artist").text(artist);
-                    $("#song").text(title);
-                    // if lastfm gives back a javascript: url its over..
-                    $("#lastfm-url").attr("href", lastfm_url);
-                }, "xdavidhu");
-            }
-            
-            updateSong();
-            setInterval(function(){
-                updateSong();
-            }, 4000);
-        </script>
-
-        <noscript>
-            <div class="panel"><h1>Please enable JavaScript.</h1></div>
-        </noscript>
-
     </body>
 </html>
