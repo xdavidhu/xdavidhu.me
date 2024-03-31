@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond:wght@400;500;600");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:wght@400");
 
 body {
     background: #f6eee3;
@@ -10,6 +10,7 @@ body {
 h1 {
     padding-left: 1em;
     text-indent: -1em;
+    font-weight: 400;
 }
 @media (max-width: 600px) {
     h1 {
@@ -48,7 +49,7 @@ a:hover {
 }
 @media (max-width: 600px) {
     .line {
-        height: 0.15em;
+        height: 0.10em;
         width: 12em;
     }
 }
